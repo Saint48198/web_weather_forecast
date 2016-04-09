@@ -1,7 +1,9 @@
 
 
         <!-- build:js(app) /_/js/main.js -->
-        <script src="/_/bower_components/handlebars/handlebars.js"></script>
+        <script src="/_/bower_components/requirejs/require.js"></script>
+        <script src="_/js/config.js"></script>
+        <script src="_/js/app.js"></script>
         <!-- endbuild -->
 
 
