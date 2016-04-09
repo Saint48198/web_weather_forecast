@@ -1,9 +1,9 @@
 require.config({
     paths: {
-        "backbone": "../bower_components/backbone/backbone",
-        "jquery": "../bower_components/jquery/jquery",
-        "underscore": "../bower_components/underscore/underscore.js",
-        "handlebars": "../handlebars/handlebars"
+        "backbone": "/_/bower_components/backbone/backbone",
+        "jquery": "/_/bower_components/jquery/jquery",
+        "underscore": "/_/bower_components/underscore/underscore",
+        "handlebars": "/_/bower_components/handlebars/handlebars"
     },
     shim: {
         "jquery": {

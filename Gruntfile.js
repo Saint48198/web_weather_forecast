@@ -41,16 +41,17 @@ module.exports = function (grunt) {
         //  edited or otherwised changed.
         watch: {
             sass: {
-                files: ['<%= yeoman.app %>/_/css/**/*.{scss,sass}'], //Watch these files, and...
+                files: ['<%= yeoman.app %>/_/scss/**/*.{scss,sass}'], //Watch these files, and...
                 tasks: ['sass:server'] //run this operation when the files change.
             },
             livereload: {
                 options: {livereload: 1025},
                 files: [
-                    '.tmp/_/css/**/*.css',
+                    '<%= yeoman.app %>/_/css/**/*.css',
                     '<%= yeoman.app %>/_/js/**/*',
                     '<%= yeoman.app %>/_/img/**/*',
-                    '<%= yeoman.app %>/**/*.php'
+                    '<%= yeoman.app %>/**/*.php',
+                    '<%= yeoman.app %>/_/views/**/*',
                 ]
             }
         },
