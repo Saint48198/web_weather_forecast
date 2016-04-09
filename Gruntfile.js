@@ -158,7 +158,7 @@ module.exports = function (grunt) {
                 },
                 files : [{
                     expand: true,
-                    cwd: '<%= yeoman.app %>/_/sass',
+                    cwd: '<%= yeoman.app %>/_/scss',
                     src: '**/*.scss',
                     dest: '<%= yeoman.app %>/_/css',
                     ext: '.css'
@@ -173,7 +173,7 @@ module.exports = function (grunt) {
                 },
                 files : [{
                     expand: true,
-                    cwd: '<%= yeoman.app %>/_/sass',
+                    cwd: '<%= yeoman.app %>/_/scss',
                     src: '**/*.scss',
                     dest: '<%= yeoman.app %>/_/css',
                     ext: '.css'

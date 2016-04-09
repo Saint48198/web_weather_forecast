@@ -1,0 +1,10 @@
+// base variables and styles
+@import 'base';
+
+// import thirdparty css and scss files
+@import "../bower_components/html5-boilerplate/css/normalize.css";
+@import "../bower_components/html5-boilerplate/css/main.css";
+@import "../bower_components/font-awesome/scss/font-awesome.scss";
+
+// site componetnts
+@import "layout";
