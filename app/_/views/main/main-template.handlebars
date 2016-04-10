@@ -37,7 +37,7 @@
             <section class="card">
                 <header>
                     <span>{{date.monthname}}, {{date.day}} {{date.year}}</span>
-                    <div>{{date.weekday}}</div>
+                    <div>{{#if @index}}{{date.weekday}}{{else}}Today{{/if}}</div>
                 </header>
                 <div class="container-weatherInfo">
                     <div><img src="{{icon_url}}" alt="{{conditions}}"></div>
