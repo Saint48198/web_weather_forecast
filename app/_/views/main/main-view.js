@@ -132,7 +132,9 @@ define(
 
         displayForecast: function (collection, resp, query) {
             this.displayForm({ query: query });
+
             this.replaceUsingTemplate("template-forecastResults", this.resultsContainer, { day: collection.toJSON() });
+            console.log(collection.toJSON());
         },
 
         displayForecastServiceError: function () {

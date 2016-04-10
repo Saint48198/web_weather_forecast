@@ -10,14 +10,19 @@
         <div id="container-form"></div>
         <div id="container-results"></div>
     </main>
-    <footer>&copy; {{copyYear}} Scott Daniels</footer>
+
+    <footer>
+        <div>&copy; {{copyYear}} Scott Daniels</div>
+    </footer>
 </script>
 
 <script id="template-form" type="text/handlebars">
     <form method="post" action="."{{#if isWorking}} disabled{{/if}}>
-        <fieldset class="input-group">
-            <input type="text" name="place" class="form-control" placeholder="Enter city name, Example: Detroit, MI" aria-label="City Name" value="{{query}}"{{#if isWorking}} disabled{{/if}}>
-            <span class="input-group-addon"><button type="submit" aria-label="search"{{#if isWorking}} disabled{{/if}}><i class="fa fa-search"></i></button></span>
+        <fieldset>
+            <div class="input-group">
+                <input type="text" name="place" class="form-control" placeholder="Enter city name, Example: Detroit, MI" aria-label="City Name" value="{{query}}"{{#if isWorking}} disabled{{/if}}>
+                <span class="input-group-addon"><button type="submit" aria-label="search"{{#if isWorking}} disabled{{/if}}><i class="fa fa-search"></i></button></span>
+            </div>
         </fieldset>
         {{#if error}}
         <div class="error">{{error}}</div>
@@ -35,8 +40,8 @@
                     <div>{{date.weekday}}</div>
                 </header>
                 <div class="container-weatherInfo">
-                    <div><img src="{{conditions.icon_url}}" alt="{{conditions.icon}}"></div>
-                    <div><span>{{high.fahrenheit}} &#8457;</span> <span>{{low.fahrenheit}} &#8457;</span></div>
+                    <div><img src="{{icon_url}}" alt="{{conditions}}"></div>
+                    <div><span class="txt-high">{{high.fahrenheit}}&#8457;</span> <span class="txt-low">{{low.fahrenheit}}&#8457;</span></div>
                 </div>
             </section>
         </li>
