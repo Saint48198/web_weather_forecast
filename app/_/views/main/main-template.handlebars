@@ -20,7 +20,7 @@
     <form method="post" action="."{{#if isWorking}} disabled{{/if}}>
         <fieldset>
             <div class="input-group">
-                <input type="text" name="place" class="form-control" placeholder="Enter city name, Example: Detroit, MI" aria-label="City Name" value="{{query}}"{{#if isWorking}} disabled{{/if}}>
+                <input type="text" name="place" class="form-control" placeholder="Enter city name. Example: Detroit, MI" aria-label="City Name" value="{{query}}"{{#if isWorking}} disabled{{/if}}>
                 <span class="input-group-addon"><button type="submit" aria-label="search"{{#if isWorking}} disabled{{/if}}><i class="fa fa-search"></i></button></span>
             </div>
         </fieldset>
