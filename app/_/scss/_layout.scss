@@ -6,7 +6,6 @@
         font-size: 22px;
 
         > div {
-            width: $screen-lg;
             margin: 0 auto;
         }
 
@@ -18,7 +17,6 @@
     }
 
     > main {
-        width: $screen-lg;
         margin: 0 auto;
         padding: 15px 0;
 
@@ -45,10 +43,6 @@
             margin: 0;
             display: flex;
         }
-
-         li {
-             width: 10%;
-         }
 
          li:nth-child(odd) {
              background: #fcfcfc;
@@ -86,7 +80,6 @@
         text-align: right;
 
         > div {
-            width: $screen-lg;
             margin: 0 auto;
         }
     }
@@ -99,5 +92,84 @@
         padding: 6px 12px;
         margin: 0;
         background: transparent;
+    }
+}
+
+
+@media only screen and (min-width: $screen-xs) {
+    #page {
+        > header:first-child > div,
+        > main,
+        > footer > div {
+            width: $screen-xs;
+        }
+
+        > main {
+            ol {
+                flex-wrap: wrap;
+            }
+            li {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $screen-sm) {
+    #page {
+        > header:first-child > div,
+        > main,
+        > footer > div {
+            width: $screen-sm;
+        }
+
+        > main {
+            ol {
+                flex-wrap: wrap;
+                border-bottom: none;
+            }
+            li {
+                width: 50%;
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $screen-md) {
+    #page {
+        > header:first-child > div,
+        > main,
+        > footer > div {
+            width: $screen-md;
+        }
+
+        > main {
+            ol {
+                flex-wrap: wrap;
+            }
+            li {
+                width: 20%;
+            }
+        }
+    }
+}
+
+@media only screen  and (min-width : $screen-lg) {
+    #page {
+        > header:first-child > div,
+        > main,
+        > footer > div {
+            width: $screen-lg;
+        }
+
+        > main {
+            ol {
+                flex-wrap: wrap;
+            }
+            li {
+                width: 10%;
+            }
+        }
     }
 }
