@@ -9,7 +9,7 @@ define([ "jquery", "underscore", "backbone"], function () {
             this.url = this.url.split("?")[0] + "?url=" + encodeURIComponent(api) + "&full_headers=1&full_status=1";
         },
         parse: function (resp) {
-            var forecast = resp.contents.forecast ? resp.contents.forecast.simpleforecast : [];
+            var forecast = resp.contents.forecast ? resp.contents.forecast.simpleforecast.forecastday : [];
             return forecast;
         }
     });

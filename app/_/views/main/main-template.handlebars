@@ -1,5 +1,5 @@
 <script id="template-main" type="text/handlebars">
-<header>
+    <header>
         <div>
             <i class="fa fa-globe"></i> Weather Station
         </div>
@@ -7,13 +7,41 @@
     <main class="page-forecast">
         <h1>Weather Forecast</h1>
         <p>Enter a city name below in order to get the three day weather forecast for that location.</p>
-        <form method="post" action=".">
-            <fieldset class="input-group">
-                <input type="text" name="place" class="form-control" placeholder="Enter city name, Example: Detroit, MI" aria-label="City Name" value="">
-                <span class="input-group-addon"><button type="submit" aria-label="search"><i class="fa fa-search"></i></button></span>
-            </fieldset>
-        </form>
+        <div id="container-form"></div>
         <div id="container-results"></div>
     </main>
     <footer>&copy; {{copyYear}} Scott Daniels</footer>
 </script>
+
+<script id="template-form" type="text/handlebars">
+    <form method="post" action="."{{#if isWorking}} disabled{{/if}}>
+        <fieldset class="input-group">
+            <input type="text" name="place" class="form-control" placeholder="Enter city name, Example: Detroit, MI" aria-label="City Name" value="{{query}}"{{#if isWorking}} disabled{{/if}}>
+            <span class="input-group-addon"><button type="submit" aria-label="search"{{#if isWorking}} disabled{{/if}}><i class="fa fa-search"></i></button></span>
+        </fieldset>
+        {{#if error}}
+        <div class="error">{{error}}</div>
+        {{/if}}
+    </form>
+</script>
+
+<script id="template-forecastResults" type="text/handlebars">
+    <ol>
+        {{#each day}}
+        <li>
+            <section class="card">
+                <header>
+                    <span>{{date.monthname}}, {{date.day}} {{date.year}}</span>
+                    <div>{{date.weekday}}</div>
+                </header>
+                <div class="container-weatherInfo">
+                    <div><img src="{{conditions.icon_url}}" alt="{{conditions.icon}}"></div>
+                    <div><span>{{high.fahrenheit}} &#8457;</span> <span>{{low.fahrenheit}} &#8457;</span></div>
+                </div>
+            </section>
+        </li>
+        {{/each}}
+    </ol>
+</script>
+
+

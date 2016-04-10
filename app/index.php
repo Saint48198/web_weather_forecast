@@ -12,6 +12,16 @@
 </head>
 <body>
     <div id="page"></div>
+    <script id="template-serviceError" type="text/handlebars">
+        <div class="container-error">
+            There was an error retrieving the content.
+        </div>
+    </script>
+    <script id="template-loading" type="text/handlebars"t>
+        <div class="conatiner-loading">
+            <i class="fa fa-circle-o-notch fa-spin"></i> loading...
+        </div>
+    </script>
     <!-- JAVASCRIPT -->
     <?php require('_/inc/tail.php'); ?>
 </body>
